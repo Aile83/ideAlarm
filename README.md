@@ -1,20 +1,16 @@
-# ideAlarm v2.4.0
+# ideAlarm v3.2.0
+Script d'alarme multizone dzVents pour Domoticz
 
-<i>ideAlarm is deprecated and not maintained anymore</i>
+Licence : GPL v3
 
-Multiple zones dzVents alarm script for Domoticz
+# Description
+ideAlarm est écrit en Lua et fonctionne avec le framework Lua dzVents intégré à Domoticz.
+Le nom ideAlarm est la contraction des mots « idéal » et « alarme ».
+Avec ideAlarm, vous pouvez facilement configurer votre propre système de sécurité domestique en utilisant les capteurs déjà installés dans Domoticz.
 
-License: GPL v3
+## Commencer !
+Wiki contenant les instructions d'installation : https://github.com/DewGew/ideAlarm/wiki. Ce wiki est en anglais et n'a pas été modifié depuis la version 2.4.0 de DewGew.
+Il sera mis à jour ultérieurement.
 
-## About
-ideAlarm is written in LUA and runs on the Domoticz built in dzVents Lua Framework.
-
-The name ideAlarm comes from merging the two words ideal and alarm.
-
-Your home is your castle. Keeping it safe and secure is a top priority of many homeowners. With ideAlarm, you can easily set up your own DIY Home Security System using the sensors that you already have in domoticz.
-
-## Get started!
-Wiki with installation instructions: https://github.com/DewGew/ideAlarm/wiki
-
-## Disclaimer
-THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+## Avertissement
+CE LOGICIEL EST FOURNI PAR L'AUTEUR « TEL QUEL » ET TOUTE GARANTIE EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALITÉ MARCHANDE ET D'ADÉQUATION À UN USAGE PARTICULIER, EST EXCLUE. EN AUCUN CAS L'AUTEUR NE SAURAIT ÊTRE TENU RESPONSABLE DES DOMMAGES DIRECTS, INDIRECTS, ACCESSOIRES, SPÉCIAUX, EXEMPLAIRES OU CONSÉCUTIFS (Y COMPRIS, MAIS SANS S'Y LIMITER, L'ACQUISITION DE BIENS OU DE SERVICES DE REMPLACEMENT ; LA PERTE D'UTILISATION, DE DONNÉES OU DE PROFITS ; OU L'INTERRUPTION D'ACTIVITÉ), QUELLE QU'EN SOIT LA CAUSE ET SUR TOUTE THÉORIE DE RESPONSABILITÉ, QU'ELLE SOIT CONTRACTUELLE, DÉLICTUELLE OU AUTRE (Y COMPRIS LA NÉGLIGENCE), DÉCOULANT DE L'UTILISATION DE CE LOGICIEL, MÊME SI L'AUTEUR A ÉTÉ AVERTI DE LA POSSIBILITÉ DE TELS DOMMAGES.
