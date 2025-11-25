@@ -45,7 +45,7 @@ _C.ALARM_ZONES = {
 		exitDelay=5,							-- Délai de sortie avant activation (en secondes)
 		alarmLastUpdateSensor=999999,			-- Dernière mise à jour d'une zone
 		alarmAlertMaxSeconds = 30,				-- Durée maximale de l’alerte pour cette zone
-		alertDevices = {'Eclairage annexe'},	-- Dispositifs déclenchés lors d’une alerte
+		alertDevices = {'Sirène'},				-- Dispositifs déclenchés lors d’une alerte
 		sensors = {
 			['Capteur entrée'] = {['class'] = SENSOR_CLASS_B, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['triggerDurationSensor'] = 60, ['triggerCountSensor'] = 3, ['enabled'] = false},
 			['Capteur antivol entrée'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['triggerDurationSensor'] = 0, ['triggerCountSensor'] = 1, ['enabled'] = true},
@@ -67,3 +67,4 @@ _C.ALARM_ZONES = {
 }
 
 return _C
+
