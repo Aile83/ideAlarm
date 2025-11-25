@@ -1,5 +1,6 @@
 # ideAlarm v3.2.0
 Script d'alarme multizone dzVents pour Domoticz
+Fork de la version 2.4.0 par DewGew (https://github.com/DewGew/ideAlarm)
 
 Licence : GPL v3
 
