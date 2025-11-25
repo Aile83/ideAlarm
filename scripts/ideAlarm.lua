@@ -5,13 +5,31 @@ Do not change anything in this file.
 --]]
 
 local alarm = require "ideAlarmModule"
-
 local triggerDevices = alarm.triggerDevices()
 
+-- Initialisation des données
 local data = {}
 data['nagEvent'] = {history = true, maxItems = 1}
+
+-- Historique pour chaque zone
 for i = 1, alarm.qtyAlarmZones() do
 	data['nagZ'..tostring(i)] = {initial=0}
+end
+
+-- Historique pour chaque capteur dans chaque zone
+for i, alarmZone in ipairs(alarm.zones()) do
+	for sensorName, _ in pairs(alarmZone.sensors) do
+		local varName = 'tripped_'..sensorName:gsub("%s+", "_")
+		data[varName] = {initial = 0}  -- timestamp initial = 0
+	end
+end
+
+-- Historique pour chaque device trigger
+for i, dev in ipairs(triggerDevices) do
+	local devName = (type(dev) == "table" and dev.name) or tostring(dev)
+	local varName = 'trigger_'..devName:gsub("%s+", "_")
+	data[varName] = {initial = 0}  -- état initial = 0
+	data['triggerCount_'..devName:gsub("%s+", "_")] = {initial = 0}  -- compteur initial = 0
 end
 
 return {
@@ -27,7 +45,10 @@ return {
 	},
 	data = data,
 	execute = function(domoticz, item)
-		domoticz.log('Triggered by '..(item.isDevice and ('device: '..item.name..', device state is: '..item.state)  or (item.isTimer and ('timer: '..item.trigger)  or (item.isSecurity and 'Domoticz Security' or 'unknown'))), domoticz.LOG_INFO)
+		-- Appel de l'exécution principale de l'alarme
+		domoticz.log('Déclenchement par '..	(item.isDevice and (item.name..', état : '..item.state) or
+											(item.isTimer and ('timer : '..item.trigger)  or
+											(item.isSecurity and 'Domoticz Security' or 'unknown'))), domoticz.LOG_INFO)
 		alarm.execute(domoticz, item)
 	end
 }
