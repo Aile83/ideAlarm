@@ -63,7 +63,31 @@ _C.ALARM_ZONES = {
 		canArmWithTrippedSensors = true, -- Autoriser l’armement même si un capteur est actif
 		syncWithDomoSec = true, -- Une seule zone peut être synchronisée avec le panneau de sécurité intégré de Domoticz
 	},
-	-- Fin de la configuration de la zone d’alarme
+	-- Fin de la configuration de la première zone d’alarme
+
+	{
+		name='Annexe',
+		armingModeTextDevID=82,
+		statusTextDevID=86,
+		entryDelay=15,
+		exitDelay=20,
+		alarmLastUpdateSensor=999999,
+		alarmAlertMaxSeconds = 120,
+		alertDevices = {'Eclairage annexe'},
+		sensors = {
+			['Capteur Nord'] = {['class'] = SENSOR_CLASS_B, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['triggerDurationSensor'] = 90, ['triggerCountSensor'] = 3, ['enabled'] = true},
+			['Capteur antivol Nord'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['triggerDurationSensor'] = 0, ['triggerCountSensor'] = 1, ['enabled'] = true},
+			['Caméra Annexe'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['triggerDurationSensor'] = 0, ['triggerCountSensor'] = 1, ['enabled'] = true},
+			['Caméra Extérieure Annexe'] = {['class'] = SENSOR_CLASS_B, ['nag'] = true, ['nagTimeoutSecs'] = 5, ['armWarn'] = true, ['triggerDurationSensor'] = 60, ['triggerCountSensor'] = 3, ['enabled'] = false},
+			['Porte garage'] = {['class'] = SENSOR_CLASS_A, ['nag'] = true, ['nagTimeoutSecs'] = 300, ['armWarn'] = true, ['triggerDurationSensor'] = 0, ['triggerCountSensor'] = 1, ['enabled'] = true},
+		},
+		armAwayToggleBtn='Alarme en absence',
+		armHomeToggleBtn='Alarme en présence',
+		mainZone = false,
+		canArmWithTrippedSensors = true,
+		syncWithDomoSec = false, -- Une seule zone peut être synchronisée avec le panneau de sécurité intégré de Domoticz
+	},
+	-- Fin de la configuration de la deuxième zone d’alarme
 }
 
 return _C
